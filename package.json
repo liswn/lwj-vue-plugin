@@ -1,10 +1,16 @@
 {
   "name": "lwj-vue-plugin",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "This is some common vue Methods",
   "author": "liswn <liswn946@gmail.com>",
   "private": false,
-
+  "license": "MIT",
+  "main": "dist/lwjVuePlugin.js",
+  "Keywords": "vue",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liswn/lwj-vue-plugin"
+  },
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
