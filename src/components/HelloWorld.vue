@@ -11,14 +11,10 @@
       <p>{{ '13981911257' | DoMobileFilter }}</p>
       <p>{{$DoMobile('13981911257') }}</p>
     </div>
-    <svg-icon style="font-size: 60px" iconClass="errorImg"></svg-icon>
+    {{$getMillisecondsOfTwoDate('2019-01-08 10:50:20', '2019-01-08 10:50:49')}}
+    <LIcon name="loading" class="lwj_loading_icon"></LIcon>
   </div>
 </template>
-{
-  unit = '',
-  Places = 2,
-  position = 'prefix'
-}
 <script>
 export default {
   name: 'HelloWorld',

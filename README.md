@@ -5,6 +5,7 @@ npm i lwj-vue-plugin -S
 ### main.js
 ```javascript
 import lwjVuePlugin from 'lwj-vue-plugin'
+import 'lwj-vue-plugin/src/lib/style/index.css'
 
 Vue.use(lwjVuePlugin)
 ```

@@ -1,14 +1,15 @@
 import {
   formatDateTime,
+  compareDateTime,
+  getMillisecondsOfTwoDate,
   formatCurrency,
   textClip,
   doMobile,
   SHA
 } from './utils'
-
 import {
   SvgIcon,
-  requiredSvg
+  LIcon
 } from './components'
 
 // 注册全局过滤器
@@ -22,6 +23,8 @@ const registerFilters = (Vue) => {
 // 注册全局方法
 const registerMethods = (Vue) => {
   Vue.prototype.$FormatDateTime = formatDateTime
+  Vue.prototype.$compareDateTime = compareDateTime
+  Vue.prototype.$getMillisecondsOfTwoDate = getMillisecondsOfTwoDate
   Vue.prototype.$FormatCurrency = formatCurrency
   Vue.prototype.$TextClip = textClip
   Vue.prototype.$DoMobile = doMobile
@@ -31,7 +34,7 @@ const registerMethods = (Vue) => {
 // 注册全局组件
 const registerComponents = (Vue) => {
   Vue.component('SvgIcon', SvgIcon)
-  requiredSvg()
+  Vue.component('LIcon', LIcon)
 }
 
 const lwjPluginVue = {
