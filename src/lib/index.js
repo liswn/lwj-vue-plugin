@@ -21,7 +21,7 @@ const registerFilters = (Vue) => {
 }
 
 // 注册全局方法
-const registerMethods = (Vue) => {
+const registerMethods = (Vue, options) => {
   Vue.prototype.$FormatDateTime = formatDateTime
   Vue.prototype.$compareDateTime = compareDateTime
   Vue.prototype.$getMillisecondsOfTwoDate = getMillisecondsOfTwoDate
@@ -29,6 +29,11 @@ const registerMethods = (Vue) => {
   Vue.prototype.$TextClip = textClip
   Vue.prototype.$DoMobile = doMobile
   Vue.prototype.$SHA = SHA
+  if (options.router) {
+    Vue.prototype.$RedirectToUrl = (url) => {
+      options.router.push(url)
+    }
+  }
 }
 
 // 注册全局组件
@@ -40,7 +45,7 @@ const registerComponents = (Vue) => {
 const lwjPluginVue = {
   install: (Vue, options) => {
     registerFilters(Vue)
-    registerMethods(Vue)
+    registerMethods(Vue, options)
     registerComponents(Vue)
   }
 }
